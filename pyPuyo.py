@@ -1,4 +1,5 @@
-from lib import Puyo
+#!/usr/bin/env python3
 
 if __name__ == "__main__":
-    Puyo.Puyo()
+  from lib import Puyo
+  Puyo.Puyo()
