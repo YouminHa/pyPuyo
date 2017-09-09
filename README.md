@@ -2,8 +2,11 @@
 
 PuyoPuyo implementation with Python.
 
+## Author
+Youmin Ha <youmin78.ha@gmail.com>
+
 ## Introduction
-This is a simple puyo puyo implementation for practicing python.
+A simple puyo puyo game implementation for practicing python.
 
 ## License
 GPLv3 without the splite image.
