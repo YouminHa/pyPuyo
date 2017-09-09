@@ -1,4 +1,6 @@
 import unittest
 
 class TestPuyo(unittest.TestCase):
-  pass
+  def __init__(self):
+    pass
+

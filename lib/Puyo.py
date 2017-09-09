@@ -1,5 +1,8 @@
 
 class Puyo:
   def __init__(self):
-    pass
+    self.run()
 
+  def run():
+    pass
+  
