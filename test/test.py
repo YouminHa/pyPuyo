@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-
+# test.py
 # Run all tests
 
-# app modules
+import unittest
+
 import appPath
 import lib.checkEnv
 
@@ -10,7 +11,14 @@ import lib.checkEnv
 import TestBlock
 import TestPuyo
 
-if __name__ == "__main__":
-  TestBlock.TestBlock();
-  TestPuyo.TestPuyo()
+# Test collection
+tests = (
+    TestBlock.TestBlock(),
+    TestPuyo.TestPuyo()
+    )
 
+# Run all tests!
+if __name__ == "__main__":
+  ts = unittest.TestSuite()
+  ts.addTests(tests)
+  unittest.TextTestRunner().run(ts)
