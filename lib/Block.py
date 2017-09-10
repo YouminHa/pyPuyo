@@ -1,7 +1,12 @@
-# Block.py
+'''
+Block.py
+
+A Block
+'''
+from enum import Enum
+
 
 # Block color
-from enum import Enum
 class Color(Enum):
   RED     = 1
   GREEN   = 2

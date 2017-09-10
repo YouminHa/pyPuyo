@@ -1,7 +1,7 @@
 import unittest
 
 import appPath
-from lib.Block import Block
+from lib.Block import Block, Color, IceBlock
 
 class TestBlock(unittest.TestCase):
   def setUp(self):
@@ -10,5 +10,5 @@ class TestBlock(unittest.TestCase):
   def tearDown(self):
     pass
 
-  def test_foo(self):
-    pass
+if __name__ == "__main__":
+  unittest.main()

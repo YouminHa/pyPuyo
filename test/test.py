@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
 # test.py
-# Run all tests
+# Run all testcases in the directory
 
-import unittest
+import glob, os, unittest
 
 import appPath
 import lib.checkEnv
 
-# test modules
-import TestBlock
-import TestPuyo
+def runAllTestCases():
+  # change to current directory
+  os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-# Test collection
-tests = (
-    TestBlock.TestBlock(),
-    TestPuyo.TestPuyo()
-    )
+  # Run all test modules
+  testFiles = glob.glob('Test*.py')
+  moduleNames = [ os.path.splitext(os.path.basename(fileName))[0] for fileName in testFiles ]
+  suites = [ unittest.defaultTestLoader.loadTestsFromName(m) for m in moduleNames ]
+  ts = unittest.TestSuite(suites)
+  tr = unittest.TextTestRunner().run(ts)
 
-# Run all tests!
-if __name__ == "__main__":
-  ts = unittest.TestSuite()
-  ts.addTests(tests)
-  unittest.TextTestRunner().run(ts)
+if __name__ == '__main__':
+  runAllTestCases()
+
